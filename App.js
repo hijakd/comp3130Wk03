@@ -2,12 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import AppText from './assets/components/AppText';
+import AppColors from './assets/config/AppColors';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <AppText style={styles.text} color={AppColors.rouge}>Cactus!?!?</AppText>
       <StatusBar style="auto" />
     </View>
+    
+    
   );
 }
 
@@ -18,4 +23,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text:{
+    color: AppColors.rouge,
+    fontWeight: 'bold',
+  }
 });
